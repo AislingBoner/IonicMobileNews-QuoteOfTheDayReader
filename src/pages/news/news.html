@@ -1,0 +1,42 @@
+
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding text-justify >
+
+<div>
+ <h4> Current Saved Settings: </h4>
+ <p>Country Selected : {{ country }}
+ <br>
+ Title Font Size Selected : {{ title }}
+ <br>
+ Description Font Size Selected : {{ description }}</p>
+</div>
+ <br>	
+ <hr>
+
+
+<ion-list >
+ 	
+ 	<h2> News from {{ country }}  </h2>
+ 	<p>Supplied by: (Newsapi.org, 2019) </p>
+ 	<br>
+ 	<ion-item *ngFor="let n of news" >
+ 		
+ 		<a [href]="n.url" > <img width="200" height="200" src="{{ n.urlToImage }}" > </a>
+
+		<a [href]="n.url" > <p class="titleSize" > {{ n.title }} </p> </a>
+
+		<a [href]="n.url" > <p id="descSize"  > {{ n.description }} </p> </a>
+
+	</ion-item>
+ 
+ </ion-list>
+
+<br>
+
+</ion-content>
+

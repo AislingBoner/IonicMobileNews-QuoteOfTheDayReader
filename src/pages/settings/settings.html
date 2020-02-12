@@ -1,0 +1,87 @@
+<ion-header>
+ <ion-navbar color="secondary">
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<p>Enter Name: </p>
+	<ion-input color="secondary"  id= "nameID" type= "text" width="500" [(ngModel)]= "name" required ></ion-input>
+	<br>
+	<hr>
+	<br>
+	<ion-list radio-group [(ngModel)]="country" color="secondary">
+			<h3> Country </h3>
+			<hr>
+			<p> Source: </p> 
+			<ion-item color="secondary" >
+				<ion-label> <img width="100" height="100" src="../assets/imgs/GalwaySpanish.jpg">Ireland</ion-label>
+				<ion-radio value="Ireland" checked > </ion-radio>
+			</ion-item>
+			<ion-item color="secondary">
+				<ion-label> <img width="100" height="100" src="../assets/imgs/Statue.jpg">USA</ion-label>
+				<ion-radio value="USA"> </ion-radio>
+			</ion-item>
+			<ion-item color="secondary">
+				<ion-label> <img width="100" height="100" src="../assets/imgs/Louise.jpg">Canada</ion-label>
+				<ion-radio value="Canada"> </ion-radio>
+			</ion-item>
+	</ion-list>
+	<hr>
+
+	<ion-list radio-group [(ngModel)]="title">
+			<h3> Font Size </h3>
+			<hr>
+			<p> Title: </p>
+			<ion-item color="secondary">
+				<ion-label> 1 </ion-label>
+				<ion-radio value="1"> </ion-radio>
+			</ion-item>
+			<ion-item color="secondary">
+				<ion-label> 2 </ion-label>
+				<ion-radio value="2"> </ion-radio>
+			</ion-item>
+			<ion-item color="secondary">
+				<ion-label> 3 </ion-label>
+				<ion-radio value="3"> </ion-radio>
+			</ion-item>
+			<ion-item color="secondary">
+				<ion-label> 4 </ion-label>
+				<ion-radio value="4" checked> </ion-radio>
+			</ion-item>
+			<ion-item color="secondary">
+				<ion-label> 5 </ion-label>
+				<ion-radio value="5"> </ion-radio>
+			</ion-item>
+	</ion-list>
+	<br>
+	<ion-list radio-group [(ngModel)]="description">
+			<hr>
+			<p> Description Size: </p>
+			<ion-item color="secondary">
+				<ion-label> 1 </ion-label>
+				<ion-radio value="1"> </ion-radio>
+			</ion-item>
+			<ion-item color="secondary">
+				<ion-label> 2 </ion-label>
+				<ion-radio value="2"> </ion-radio>
+			</ion-item>
+			<ion-item color="secondary">
+				<ion-label> 3 </ion-label>
+				<ion-radio value="3" checked > </ion-radio>
+			</ion-item>
+			<ion-item color="secondary">
+				<ion-label> 4 </ion-label>
+				<ion-radio value="4"> </ion-radio>
+			</ion-item>
+			<ion-item color="secondary">
+				<ion-label> 5 </ion-label>
+				<ion-radio value="5"> </ion-radio>
+			</ion-item>
+	</ion-list>
+	<br>
+	<hr>
+
+	<button ion-button round (click)="saveSettings()"> Save </button>
+
+</ion-content>

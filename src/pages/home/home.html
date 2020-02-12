@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>My News App</ion-title>
+
+
+    <ion-buttons end>
+      <button ion-button (click)="openSettingsPage()">
+        <ion-icon name="settings" end></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+  <h1> Welcome {{ name }} !!!</h1>
+  <br>
+   <img width="2000" height="350" src="../assets/imgs/BreakingNews.jpg" class="img-responsive ">
+
+  <br><br>
+	<button  ion-button round (click)="openNewsPage()">
+	 <ion-icon name="globe"></ion-icon> News
+	</button>
+
+ <br><br><br>
+<div *ngFor = "let q of quote">
+<h1 width="500" height="400"> {{ q.quote }}  </h1>
+      
+      <h3> {{ q.author }} </h3>
+
+    </div>
+
+</ion-content>
